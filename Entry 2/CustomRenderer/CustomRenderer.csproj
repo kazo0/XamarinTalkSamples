@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MainPageXaml.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MyEntry.cs" />
+    <Compile Remove="MainPage.cs" />
+    <Compile Remove="MainPageXaml.xaml.cs" />
+  </ItemGroup>
+</Project>
